@@ -8,9 +8,9 @@
 
 <h4> Feature Playlists </h4>
 <ul>
-  <%= for playlist <- @playlists do %>
+  <%= for track <- @playlist.tracks do %>
     <li>
-      <%= playlist.name %>
+      <%= track.name %>
     </li>
   <% end %>
 </ul>

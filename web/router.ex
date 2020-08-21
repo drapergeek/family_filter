@@ -18,7 +18,7 @@ defmodule SpotifyExTest.Router do
 
     get "/", HomeController, :index
     get "/profile", ProfileController, :index
-    get "/playlist", PlaylistController, :index
+    resources "/playlists", PlaylistController, only: [:index, :show]
     get "/personalization", PersonalizationController, :index
     get "/authorize", AuthorizationController, :authorize
     get "/authenticate", AuthenticationController, :authenticate
